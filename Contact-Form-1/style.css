@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --white: var(#fff);
+  --primary-color: #be8a35;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/imagem_de_fundo.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  background-color: rgba(177, 177, 177, 0.783);
+  color: var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.group input,
+.group textarea,
+.group button {
+  position: relative;
+  padding: 0.7rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+.group label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(10px, -50%);
+  font-size: 0.9rem;
+}
+
+.group textarea {
+  resize: none;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  position: absolute;
+  left: 0;
+  top: -12px;
+  transform: translate(10px, -50%);
+  font-size: 0.8rem;
+  color: #fff;
+  transition: 0.52s;
+  font-weight: bold;
+}
+.group button {
+  cursor: pointer;
+  background-color: #be8a35;
+  color: #ffffff;
+}
+.group button:hover {
+  transform: scale(1.1);
+}
